@@ -1,3 +1,12 @@
+---
+layout: post
+title:  Beginning with MarkDown
+date:   2021-7-11
+categories: Git
+tags: MarkDown
+author: Karl Harris
+mathjax: true
+---
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -21,17 +30,6 @@
   - [引用](#%E5%BC%95%E7%94%A8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
----
-layout:     post
-title:      Beginning with MarkDown
-subtitle:   
-date:       2021-7-11
-author:     Karl Harris
-catalog: true
-tags:
-    - MarkDown Note
----
 
 # 前言
 学习MarkDown更有利于写笔记，所以写下此笔记，干就完了，奥里给！
@@ -65,8 +63,11 @@ tags:
 ---
 ## 标题
     #一级标题
+
     ## 二级标题
+
     ### 三级标题
+
     #### 四级标题   
     .....
 
@@ -95,6 +96,7 @@ tags:
           2. b
           3. c
 ---
+
 ## 图片 
     ![icon](link to pictrue)
 
@@ -107,11 +109,13 @@ tags:
 
 ## 链接的另一种表现形式 
 
-    <url><link to content>  
+    <url><link to content>
+
 ---
 ## 分割线
     ***
     ---
+    
 ---
 ## 表格
     冒号表示空白区
@@ -126,6 +130,7 @@ tags:
 |xxxxx   |xxxxxx  |xxxxxx  |
 |aaaaa   |aaaaaa  |aaaaaa  |
 |ccccc   |cccccc  |cccccc  |
+
 ---
 ## 代码块
     每行前+tab或者加4个空格实现原理一样

@@ -14,13 +14,13 @@ url: "https://DJKarlHarris.github.io" # the base hostname & protocol for your si
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: #gaohaoyang126
-facebook_username: #gaohaoyang.water
+twitter_username: 
+facebook_username: 
 github_username:  DJKarlHarris
 email: 1149338863@qq.com
 weibo_username: 
 zhihu_username: 
-linkedIn_username: DJKarlHarris
+linkedIn_username: 
 dribbble_username:
 
 description_footer: 来自KarlHarris的技术专栏
@@ -50,7 +50,7 @@ ga_domain: auto
 
 friends: [
     {
-        title: "Linkedin - Xin YAO",
+        title: "Linkedin - Karl Harris",
         href: "https://www.linkedin.com/in/%E4%BF%A1-%E5%A7%9A-947492167/"
     }
 ]
