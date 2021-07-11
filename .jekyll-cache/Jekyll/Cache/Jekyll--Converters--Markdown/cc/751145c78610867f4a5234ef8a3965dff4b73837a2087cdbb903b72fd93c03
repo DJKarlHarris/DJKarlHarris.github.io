@@ -1,0 +1,169 @@
+I"/<h1 id="前言">前言</h1>
+<p>学习MarkDown更有利于写笔记，所以写下此笔记，干就完了，奥里给！</p>
+
+<h1 id="markdown-synatx">MarkDown Synatx</h1>
+<h2 id="标题">标题</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#一级标题
+## 二级标题
+### 三级标题
+#### 四级标题   
+.....
+</code></pre></div></div>
+
+<h2 id="无序标题">无序标题</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*-textName
+</code></pre></div></div>
+
+<ul>
+  <li>textName</li>
+</ul>
+
+<h2 id="有序标题">有序标题</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.textName
+</code></pre></div></div>
+
+<ol>
+  <li>textName</li>
+</ol>
+
+<h2 id="嵌套列表">嵌套列表</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  + A
+      - B
+          + C  
+          1. a
+          2. b
+          3. c
+</code></pre></div></div>
+
+<ul>
+  <li>A
+    <ul>
+      <li>B
+        <ul>
+          <li>C
+            <ol>
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="图片">图片</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![icon](link to pictrue)
+</code></pre></div></div>
+
+<p><img src="img\dog.jpg" alt="狗子" /></p>
+
+<h2 id="链接">链接</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[content](link to content)
+</code></pre></div></div>
+
+<p><a href="www.baidu.com">百度</a></p>
+
+<h2 id="链接的另一种表现形式">链接的另一种表现形式</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;url&gt;&lt;link to content&gt;  
+</code></pre></div></div>
+
+<h2 id="分割线">分割线</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***
+---
+</code></pre></div></div>
+
+<h2 id="表格">表格</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>冒号表示空白区
+|columm 1|column 2|column 3|
+| ------ |:------:|:-------|
+|xxxxx   |xxxxxx  |xxxxxx  |
+|aaaaa   |aaaaaa  |aaaaaa  |
+|ccccc   |cccccc  |cccccc  |
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>columm 1</th>
+      <th style="text-align: center">column 2</th>
+      <th style="text-align: left">column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>xxxxx</td>
+      <td style="text-align: center">xxxxxx</td>
+      <td style="text-align: left">xxxxxx</td>
+    </tr>
+    <tr>
+      <td>aaaaa</td>
+      <td style="text-align: center">aaaaaa</td>
+      <td style="text-align: left">aaaaaa</td>
+    </tr>
+    <tr>
+      <td>ccccc</td>
+      <td style="text-align: center">cccccc</td>
+      <td style="text-align: left">cccccc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="代码块">代码块</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>每行前+tab或者加4个空格实现原理一样
+``` [c++]
+int main(){
+    cout&lt;&lt;"Hello world"&lt;&lt;endl;
+}
+```
+</code></pre></div></div>
+
+<pre><code class="language-[c++]">int main(){
+    cout&lt;&lt;"Hello world"&lt;&lt;endl;
+}
+</code></pre>
+
+<h2 id="文章段">文章段</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>__content__
+</code></pre></div></div>
+
+<p><strong>HelloWorld</strong></p>
+
+<h2 id="加粗段">加粗段</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**content**
+</code></pre></div></div>
+
+<p><strong>Helloworld</strong></p>
+
+<h2 id="斜体">斜体</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***Helloworld***
+</code></pre></div></div>
+
+<p><strong><em>Helloworld</em></strong></p>
+
+<h2 id="字体字号颜色">字体、字号、颜色</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;font face="字体类型"&gt;文章内容&lt;/font&gt;
+&lt;font face="微软雅黑"&gt;微软雅黑&lt;/font&gt;
+&lt;font face="黑体"&gt;黑体&lt;/font&gt;
+&lt;font face="楷体"&gt;楷体&lt;/font&gt;
+&lt;font face="宋体"&gt;宋体&lt;/font&gt;
+&lt;font face="harlow solid"&gt;harlow solid&lt;/font&gt;
+</code></pre></div></div>
+<font face="微软雅黑">微软雅黑</font>
+<font face="黑体">黑体</font>
+<font face="楷体">楷体</font>
+<font face="宋体">宋体</font>
+<font face="harlow solid">harlow solid</font>
+
+<h2 id="引用">引用</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>普通引用:&gt;
+引用链接：
+[1][百度](www.baidu.com)
+</code></pre></div></div>
+
+<blockquote>
+  <p>亚里士多德曾经说没有网络的地方就是最遥远的地方</p>
+</blockquote>
+:ET

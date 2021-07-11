@@ -16,11 +16,11 @@ permalink: /:year/:month/:day/:title/
 # other links
 twitter_username: #gaohaoyang126
 facebook_username: #gaohaoyang.water
-github_username:  XinYao1994
-email: 1149338863@connect.hku.hk
+github_username:  DJKarlHarris
+email: 1149338863@qq.com
 weibo_username: 
 zhihu_username: 
-linkedIn_username: xinyao1994
+linkedIn_username: DJKarlHarris
 dribbble_username:
 
 description_footer: 来自KarlHarris的技术专栏
@@ -58,11 +58,11 @@ friends: [
 # Build settings
 markdown: kramdown
 
-kramdown:
+krkamdown:
   input: GFM
   syntax_highlighter: rouge
 
-# port
+#k port
 # port: 1234
 
 # url
