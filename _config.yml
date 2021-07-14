@@ -23,7 +23,7 @@ zhihu_username:
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 来自KarlHarris的技术专栏
+description_footer: 来自老乐的技术专栏
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -32,14 +32,12 @@ description_footer: 来自KarlHarris的技术专栏
 # disqus_shortname: #gaohaoyang
 # using Gitalk
 
-disqus_shortname: www.karlHarris.cn
-
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: efd2bbe85e4a5e0ae9c7                         #生成的clientID
-  clientSecret: 5d259ab54a96723fa4b73112ae23a715ba3642c1    #生成的clientSecret
-  repo: DJKarlHarris.github.io    #仓库名称
-  owner: DJKarlHarris    #github用户名
+  clientID: efd2bbe85e4a5e0ae9c7                        #生成的clientID
+  clientSecret: 5c728f51be4720b9ee7a19298e63413924b87d4c #生成的clientSecret
+  repo: DJKarlHarris.github.io  #仓库名称
+  owner: DJKarlHarris  #github用户名
   admin: DJKarlHarris
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
