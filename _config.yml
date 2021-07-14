@@ -36,8 +36,8 @@ disqus_shortname: www.karlHarris.cn
 
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 52bbb620d9680fd85254                            #生成的clientID
-  clientSecret: d92cec378527800b0816d1bdd26dc71eb5dd0ccd    #生成的clientSecret
+  clientID: efd2bbe85e4a5e0ae9c7                         #生成的clientID
+  clientSecret: 5d259ab54a96723fa4b73112ae23a715ba3642c1    #生成的clientSecret
   repo: DJKarlHarris.github.io    #仓库名称
   owner: DJKarlHarris    #github用户名
   admin: DJKarlHarris
