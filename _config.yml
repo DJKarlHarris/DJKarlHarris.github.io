@@ -31,6 +31,9 @@ description_footer: 来自KarlHarris的技术专栏
 # duoshuo_shortname: xyao #hygblog
 # disqus_shortname: #gaohaoyang
 # using Gitalk
+
+disqus_shortname: www.karlHarris.cn
+
 gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 52bbb620d9680fd85254                            #生成的clientID
@@ -76,3 +79,4 @@ excerpt_separator: "\n\n\n\n"
 plugins: [jekyll-paginate]
 paginate: 6
 port: 4001
+

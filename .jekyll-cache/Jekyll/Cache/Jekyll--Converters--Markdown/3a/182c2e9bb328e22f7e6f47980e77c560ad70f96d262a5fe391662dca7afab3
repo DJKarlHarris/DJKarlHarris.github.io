@@ -1,6 +1,5 @@
-I"L<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+I"�<!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
 
 <ul>
   <li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
@@ -57,18 +56,20 @@
     <p>直接cd到post所在目录，然后输入以下代码即可</p>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> doctoc xxx.md
 </code></pre></div>    </div>
-    <hr />
-    <h2 id="标题">标题</h2>
-    <p>#一级标题</p>
-
-    <p>## 二级标题</p>
-
-    <p>### 三级标题</p>
-
-    <p>#### 四级标题 <br />
- …..</p>
   </li>
 </ol>
+
+<hr />
+<h2 id="标题">标题</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#一级标题
+
+## 二级标题
+
+### 三级标题
+
+#### 四级标题   
+.....
+</code></pre></div></div>
 
 <h2 id="无序标题">无序标题</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*-textName
@@ -83,28 +84,18 @@
 </code></pre></div></div>
 
 <ol>
-  <li>
-    <h2 id="textname">textName</h2>
-    <h2 id="嵌套列表">嵌套列表</h2>
-    <ul>
-      <li>A
-        <ul>
-          <li>B
-            <ul>
-              <li>C
-                <ol>
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ol>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li>textName</li>
 </ol>
+
+<hr />
+<h2 id="嵌套列表">嵌套列表</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  + A
+      - B
+          + C  
+          1. a
+          2. b
+          3. c
+</code></pre></div></div>
 
 <ul>
   <li>A
