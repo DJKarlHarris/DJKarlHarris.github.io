@@ -28,7 +28,7 @@ mathjax: true
 ---
 # 从内存分析
 
-![内存示意图](img\reference1.png)
+![内存位置]({{"https://www.karlharris.cn/img/reference1.png"|absolute_url}})
 
 	double x = 0;
 	double* p = &x;
