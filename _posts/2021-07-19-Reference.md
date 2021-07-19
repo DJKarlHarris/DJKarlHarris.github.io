@@ -28,7 +28,7 @@ mathjax: true
 ---
 # 从内存分析
 
-![内存示意图](karlharris.cn/img/reference1.png)
+![内存示意图](_posts\img\reference1.png)
 
 	double x = 0;
 	double* p = &x;
