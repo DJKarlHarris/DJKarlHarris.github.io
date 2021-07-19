@@ -1,0 +1,81 @@
+I")<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
+
+<ul>
+  <li><a href="#reference%E5%BC%95%E7%94%A8%E7%89%B9%E7%82%B9">Reference(引用)特点</a></li>
+  <li><a href="#%E4%BB%8E%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90">从内存分析</a></li>
+  <li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%96%9C%E6%AC%A2%E7%94%A8referencce">为什么喜欢用Referencce</a></li>
+  <li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
+</ul>
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h1 id="reference引用特点">Reference(引用)特点</h1>
+<ol>
+  <li>
+    <p><strong>Reference</strong>一般不用在变量的声明上,通常在参数传递时使用<strong>Reference</strong>(Pass by reference or Return by reference),<strong>原因：传入传出时速度更快~</strong></p>
+  </li>
+  <li>
+    <p>本质是<strong>pointer</strong>(指针),引用的内部实现是通过指针实现的,编译器将其伪装成值,因此引用(<strong>Reference</strong>)可称为代表一个值</p>
+  </li>
+</ol>
+
+<hr />
+<h1 id="从内存分析">从内存分析</h1>
+
+<!-- ![内存示意图](img\reference1.png) -->
+
+<p><img src="http://localhost:4001/img%5Creference1.png" alt="内存示意图" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>double x = 0;
+double* p = &amp;x;
+double&amp; r = x;
+
+cout &lt;&lt; sizeof(x) &lt;&lt; endl;//8字节
+cout &lt;&lt; sizeof(p) &lt;&lt; endl;//4字节
+cout &lt;&lt; sizeof(r) &lt;&lt; endl;//8字节 sizeof(r)==sizeof(x)
+cout &lt;&lt; *p &lt;&lt; endl;//0
+cout &lt;&lt; x &lt;&lt; endl; //0
+cout &lt;&lt; r &lt;&lt; endl; //0
+cout &lt;&lt; p &lt;&lt; endl; //007BFAA8
+cout &lt;&lt; &amp;x &lt;&lt; endl;//007BFAA8
+cout &lt;&lt; &amp;r &lt;&lt; endl;//007BFAA8
+</code></pre></div></div>
+
+<p><strong>*可以很清楚的看出指针占4个字节，而值和引用都占8个字节，因此引用与值的大小相同，地址相同，值多大，引用就是多大，这是编译器造成的假象，其实引用就是一个指针，是一种更漂亮的指针</strong></p>
+
+<hr />
+<h1 id="为什么喜欢用referencce">为什么喜欢用Referencce</h1>
+<p>1.因为其本质是指针，所以传入传出时速度快，占用空间小</p>
+
+<p>2.传入传出引用与传入传出值时格式高度一致</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//被调用端
+void func1(Cls* pobj) {pobj-&gt;xxx();}//指针传参
+void func2(Cls obj){obj.xxx();}//普通传参
+void func3(Cls&amp; obj){obj.xxx();}//与普通传参数写法相同
+
+Cls obj；
+//调用端
+func1(&amp;obj)；//指针调用端
+func2(obj);//普通调用
+func3(obj);//与普通调用端相同
+</code></pre></div></div>
+
+<h1 id="注意事项">注意事项</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//以下被视为same signature(相同签名)
+double imag(const double&amp; im){....}
+double imag(const double im){....} //Ambiguity
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>这种情况时函数是不可以重载的，因为参数列表在编译器看来是同一个东西</p>
+  </li>
+  <li>
+    <h2 id="这种情况下可以重载const函数因为编译器视const为不同签名">这种情况下可以重载const函数，因为编译器视const为不同签名</h2>
+  </li>
+</ul>
+
+:ET
