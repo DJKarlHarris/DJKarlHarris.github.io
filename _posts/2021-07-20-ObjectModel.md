@@ -22,10 +22,13 @@ mathjax: true
 # ObjectModel
 ## vptr(虚指针)&&vtable(虚表)「虚机制」
 ### 对象模型在底层内存的分析
+
+**先上代码:**
+    
     class a{
     public: 
-        virtual void virtual_func1();
-        virtual void virtual_func2();  
+        virtual void virtual_func1(); //虚函数
+        virtual void virtual_func2(); //虚函数
         void func1();
         void func2(); 
     private:
@@ -34,7 +37,7 @@ mathjax: true
 
     class b:public a{
     public:
-        virtual void virtual-func1(); 
+        virtual void virtual-func1(); //子类b重写了父类a的虚函数
         void func3(); 
     private:
         int m-data3;
@@ -42,7 +45,7 @@ mathjax: true
 
     class c:public b{
     public:
-        virtual void virtual-func1();
+        virtual void virtual-func1(); //子类c重写了父类b的虚函数
         void func4();
     private:
         int m-data1,m-data2;
@@ -50,7 +53,7 @@ mathjax: true
 
 ![内存图示]({{"https://www.karlharris.cn/img/objectmodel.png"|absolute_url}})
 
-图表达的类对象在内存中的分布是真实存在的，从图中可以看出类中含有一个以上的**虚函数**并且类和类之间有继承关系时(**函数的继承不是指继承函数所占内存大小，而是指继承函数调用权**)，类内会有多出一个**指针(虚指针)** 指向 **虚表**，子类的指针指向的虚表里**相同的指针**指向**没有重写(OverRide)**的**虚函数**,子类重载的虚函数会被重新分配一个地址.编译器看到有指针指向的类使用虚函数时就进行图示调用(动态绑定),指向对象的**p指针**通过指向**虚表的vptr**找**指向虚函数的vtable**找对应的函数地址，虚函数的调用解释称成C形式的代码如下所示:
+图表达的类对象在内存中的分布是真实存在的，从图中可以看出类中含有一个以上的**虚函数**并且类和类之间有继承关系时(**函数的继承不是指继承函数所占内存大小，而是指继承函数调用权**)，类内会有多出一个**指针(虚指针)** 指向 **虚表**，子类**没有重写(OverRide)**的**虚函数**都会指向同一个虚函数(相同地址),而子类**重写**的虚函数会被**重新分配**一个地址.编译器看到有指针指向的类使用虚函数时就进行图示调用(动态绑定),即指向对象的**p指针**通过指向**虚表的vptr**找到**指向虚函数的vtable**最后找到想要调用函数地址，虚函数的调用解释称成C形式的代码如下所示:
 
     *(ptr->vptr)[n](p);
     (*ptr->vptr[n])(p);
