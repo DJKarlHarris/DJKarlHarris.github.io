@@ -27,7 +27,9 @@ mathjax: true
 ### 前序遍历(迭代实现)要点：
 1. 遍历顺顺序：根节点->左节点->右节点    
 2. 从整体来看，遍历顺序为根节点->**左子树**->**右子树**，要想实现这种顺序，就必须得缓存节点信息，不然就无法遍历右子树了，只能一直访问左节点也就无法产生左子树了。根据这种关系，我们可以选择一种后进先出(FIFO)的数据结构，也就是栈(stack)
-## 实现代码：
+
+## 实现代码:
+
     vector<int> preorder(Node* root) {
         vector<int> ans;
         stack<Node*> stk;
@@ -45,6 +47,7 @@ mathjax: true
         }
         return ans;
     }
+
 ---
     //循环处理操作可以替换为下面版本
     auto it=node->children.end();
@@ -52,4 +55,5 @@ mathjax: true
         if(*(--it)!=nullptr)
             stk.push(*it);
         }
+        
 ## **LeetCode相关题目链接**: [589](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/submissions/)
