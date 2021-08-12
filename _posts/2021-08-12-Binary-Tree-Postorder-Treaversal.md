@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 二叉树后序遍历
-date:   2021-8-12
+title: Binary Tree Postorder Treaversal
+date:  2021-8-12
 categories: Algorithm
 tags: 二叉树 迭代 遍历
 author: Karl Harris
