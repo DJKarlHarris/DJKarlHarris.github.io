@@ -30,7 +30,7 @@ mathjax: true
         int i=0,j=0,k=nums.size()-1;
         while(j<k){
             if(nums[j]>target){
-                swap(nums[k++],nums[j]);//没有j++是因为从尾部换上来的数不能确定是否小于等于target
+                swap(nums[k--],nums[j]);//没有j++是因为从尾部换上来的数不能确定是否小于等于target
             }
             else if(nums[j]<target){
                 swap(nums[i++],nums[j++]);
