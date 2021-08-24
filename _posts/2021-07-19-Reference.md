@@ -92,7 +92,9 @@ mathjax: true
 	int &r1 = temp;//编译失败，r1未能实现绑定d的效果(实际绑定的是temp)
 
 ## 代码运行图示
+
 ![图示]({{"https://www.karlharris.cn/img/reference2.png"|absolute_url}})
+
 ## 总结
 常量引用只要绑定的对象能够成功转换成引用的类型即可，非常量对象则必须绑定类型一致的对象
 
