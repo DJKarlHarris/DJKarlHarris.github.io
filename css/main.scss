@@ -55,3 +55,18 @@
 // 就再次回到这列车上
 // 我们谈天说地
 // 把酒言欢，赠予你新路途纹银
+
+/* Content */
+div.content pre {
+    background: #d42525;
+    padding: 10px;
+    color: rgb(20, 199, 29);
+    overflow-x: auto;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 12px;
+    border: none;
+}
+/* Removed this part to be able to change background of "pre" */
+/* div.content .highlight { 
+ background: #333333;
+} */
